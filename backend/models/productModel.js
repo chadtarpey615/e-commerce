@@ -43,7 +43,7 @@ const productSchema = mongoose.Schema({
         default: 0
     },
     numReviews: {
-        type: number,
+        type: Number,
         required: true,
         default: 0
     },
@@ -65,6 +65,6 @@ const productSchema = mongoose.Schema({
     }
 )
 
-const Product = mongoose.model("User", productSchema)
+const Product = mongoose.model("Product", productSchema)
 
 export default Product
