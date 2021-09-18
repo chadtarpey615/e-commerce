@@ -1,13 +1,12 @@
 import express from "express"
-import { getProductById, getProducts } from "../controllers/productController.js"
+import { authUser } from "../controllers/userController.js"
 const router = express.Router()
 
 
 // @desc fetch all products 
 // @route  GET /api/products
 // @access public
-router.route("/").get(getProducts)
-router.route("/:").get(getProductById)
+router.post("/login", authUser)
 
 
 
