@@ -1,5 +1,6 @@
 import express from "express"
-import { authUser } from "../controllers/userController.js"
+import { authUser, getUserProfile } from "../controllers/userController.js"
+import { protect } from "../middleware/authMiddleware.js"
 const router = express.Router()
 
 
@@ -7,6 +8,7 @@ const router = express.Router()
 // @route  GET /api/products
 // @access public
 router.post("/login", authUser)
+router.route("/profile").get(protect, getUserProfile)
 
 
 
