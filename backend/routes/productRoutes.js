@@ -7,7 +7,7 @@ const router = express.Router()
 // @route  GET /api/products
 // @access public
 router.route("/").get(getProducts)
-router.route("/:").get(getProductById)
+router.route("/:id").get(getProductById)
 
 
 
